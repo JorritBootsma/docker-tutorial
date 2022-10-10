@@ -1,5 +1,5 @@
 # docker-tutorial
-Dockerizing a Python/FastAPI application.
+Dockerizing a Python/FastAPI application using Github Actions
 
 Following a combination of these tutorials:  
 https://docs.docker.com/language/python/  
