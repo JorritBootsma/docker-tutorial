@@ -48,6 +48,6 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:latest
 
-      # Echo the result
+      # Echo the results
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
