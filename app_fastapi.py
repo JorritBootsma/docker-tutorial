@@ -27,3 +27,8 @@ def farewell(name: str):
 @app.get("/test_with_latest")
 def test():
     return {"response": "The latest image is inded pulled!"}
+
+
+@app.get("/version_number")
+def version_number():
+    return {"response": "0.1.0"}
