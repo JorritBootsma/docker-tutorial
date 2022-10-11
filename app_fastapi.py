@@ -15,5 +15,10 @@ def read_item(item_id: int, q: Union[str, None] = None):
 
 
 @app.get("/hello/{name}")
-def read_item(name: str):
+def greet(name: str):
     return {"response": f"Hello {name}"}
+
+
+@app.get("/goodbye/{name}")
+def farewell(name: str):
+    return {"response": f"Farewell {name}!"}
