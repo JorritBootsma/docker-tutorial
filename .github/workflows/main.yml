@@ -46,7 +46,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:${{ GITHUB_SHA::7 }}
 
       # Echo the results
       - name: Image digest
@@ -67,4 +67,4 @@ jobs:
           app-name: 'docker-tutorial-python'
           slot-name: 'production'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:latest2
+          images: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:${{ GITHUB_SHA::7 }}
