@@ -46,25 +46,25 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:${{ github.sha }}
 
       # Echo the results
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 
-#  deploy:
-#    runs-on: ubuntu-latest
-#    needs: build
-#    environment:
-#      name: 'production'
-#      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-#
-#    steps:
-#      - name: Deploy to Azure Web App
-#        id: deploy-to-webapp
-#        uses: azure/webapps-deploy@v2
-#        with:
-#          app-name: 'docker-tutorial-python'
-#          slot-name: 'production'
-#          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-#          images: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:${{ github.sha }}
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'docker-tutorial-python'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:${{ github.sha }}
