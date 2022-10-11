@@ -21,7 +21,7 @@ def greet(name: str):
 
 @app.get("/goodbye/{name}")
 def farewell(name: str):
-    return {"response": f"Farewell {name}!"}
+    return {"response": f"Goodbye {name}!"}
 
 
 @app.get("/test_with_latest")
