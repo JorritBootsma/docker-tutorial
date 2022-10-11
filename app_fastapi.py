@@ -22,3 +22,8 @@ def greet(name: str):
 @app.get("/goodbye/{name}")
 def farewell(name: str):
     return {"response": f"Farewell {name}!"}
+
+
+@app.get("/test_with_latest")
+def test():
+    return {"response": "The latest image is inded pulled!"}
