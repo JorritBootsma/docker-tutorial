@@ -46,7 +46,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:latest
 
       # Echo the results
       - name: Image digest
