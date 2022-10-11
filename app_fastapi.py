@@ -31,4 +31,4 @@ def test():
 
 @app.get("/version_number")
 def version_number():
-    return {"response": "0.1.0"}
+    return {"response": "0.2.0"}
