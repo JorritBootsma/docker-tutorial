@@ -64,3 +64,8 @@ def streamlit_farewell(name: str, age: Union[str, int]):
     elif age > 30:
         farewell = "Tot ziens"
     return {"response": f"{farewell} {name}"}
+
+
+@app.get("/dummy_functionality")
+def dummy_func():
+    return {"response": f"Dummy functionality implemented!"}
