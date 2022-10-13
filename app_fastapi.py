@@ -34,7 +34,7 @@ def version_number():
     return {"response": "0.3.1-test_version_number"}
 
 
-@app.get("streamlit_greeting")
+@app.get("/streamlit_greeting")
 def streamlit_greeting(name: str, age: Union[str, int]):
     greeting = ""
     age = int(age)
