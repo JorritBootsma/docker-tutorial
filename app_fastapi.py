@@ -48,3 +48,19 @@ def streamlit_greeting(name: str, age: Union[str, int]):
     elif age > 30:
         greeting = "Goedendag"
     return {"response": f"{greeting} {name}"}
+
+
+@app.get("/streamlit_goodbye")
+def streamlit_farewell(name: str, age: Union[str, int]):
+    farewell = ""
+    age = int(age)
+
+    if age < 5:
+        farewell = "TA-DA"
+    elif 5 <= age < 18:
+        farewell = "Later"
+    elif 18 <= age < 30:
+        farewell = "De ballen"
+    elif age > 30:
+        farewell = "Tot ziens"
+    return {"response": f"{farewell} {name}"}
