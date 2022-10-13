@@ -68,4 +68,4 @@ def streamlit_farewell(name: str, age: Union[str, int]):
 
 @app.get("/dummy_functionality")
 def dummy_func():
-    return {"response": f"Dummy functionality implemented! BLABLABLA"}
+    return {"response": f"Dummy functionality implemented!"}
