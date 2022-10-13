@@ -58,7 +58,7 @@ def streamlit_farewell(name: str, age: Union[str, int]):
     if age < 5:
         farewell = "TA-DA"
     elif 5 <= age < 18:
-        farewell = "Later"
+        farewell = "Doei"
     elif 18 <= age < 30:
         farewell = "De ballen"
     elif age > 30:
