@@ -11,12 +11,14 @@ RUN pip3 install -v -r requirements.txt
 
 COPY . .
 
+# EXPOSE 80
+
 # For FastAPI:
 CMD ["uvicorn", "app_fastapi:app", "--host", "0.0.0.0", "--port", "80"]
 
 # For Flask:
 # CMD ["python3", "-m", "flask", "--app", "app_flask.py", "run", "--host=0.0.0.0"]
 
-# Final alternative:
+# Alternatively:
 # -- In this case main.py contains the routes and a call such as "uvicorn.run(app, host='0.0.0.0', port=80)"
 # CMD ["python3", "main.py"]
