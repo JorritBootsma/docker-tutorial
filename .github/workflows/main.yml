@@ -55,10 +55,10 @@ jobs:
       # Build and Push image Backend Image
       - name: Build and push Backend Image
         id: docker_build
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v2
         with:
-          context: .
-          file: backend/Dockerfile
+          context: ./backend
+          file: ./backend/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi_server:${{ github.sha }}
           cache-from: type=local,src=/tmp/.buildx-cache
