@@ -1,7 +1,11 @@
-import streamlit as st
+import os
 import requests
+import streamlit as st
 
-BASE_URL = "https://docker-tutorial-python.azurewebsites.net/"
+PROD_URL = "https://docker-tutorial-python.azurewebsites.net/"
+DEV_URL = "127.0.0.1:8080"
+
+BASE_URL = PROD_URL if os.environ["PROD"] else DEV_URL
 
 st.title("Fill in your details!")
 
