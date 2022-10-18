@@ -1,6 +1,6 @@
 # docker-tutorial
 Dockerizing a Python application using Github Actions and deploying to Azure App Service. 
-The application consists of a FastAPI backend server and a Streamlit frontend. 
+The application consists of a simple FastAPI backend server and Streamlit frontend. 
 
 Following a combination of these tutorials:
 - https://docs.docker.com/language/python/
