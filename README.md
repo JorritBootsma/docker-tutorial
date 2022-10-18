@@ -7,3 +7,4 @@ https://towardsdatascience.com/how-to-deploy-a-machine-learning-model-with-fasta
 
 Including Streamlit  
 https://rihab-feki.medium.com/deploying-machine-learning-models-with-streamlit-fastapi-and-docker-bb16bbf8eb91
+https://github.com/subhasisj/FastAPI-Streamlit-Docker-NLP
