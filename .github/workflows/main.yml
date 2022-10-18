@@ -102,4 +102,5 @@ jobs:
       # Echo the results
       - name: URL
         run: |
+          echo ${{ steps.deploy-to-webapp.outputs }}
           echo ${{ steps.deploy-to-webapp.outputs.webapp-url }}

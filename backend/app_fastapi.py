@@ -31,7 +31,7 @@ def test():
 
 @app.get("/version_number")
 def version_number():
-    return {"response": "v0.3.1-test_FE_BE_structure"}
+    return {"response": "v0.3.3"}
 
 
 @app.get("/streamlit_greeting")
@@ -41,7 +41,9 @@ def streamlit_greeting(name: str, age: Union[str, int]):
 
     if age < 5:
         greeting = "TA-DA"
-    elif 5 <= age < 18:
+    elif 5 <= age < 12:
+        greeting = "Hoi"
+    elif 12 <= age < 18:
         greeting = "Yo"
     elif 18 <= age < 30:
         greeting = "Hallo"
